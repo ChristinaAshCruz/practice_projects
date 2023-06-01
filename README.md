@@ -1,1 +1,1 @@
-# practice_projects
+# Practice Projects
