@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Ubuntu:wght@700&display=swap");
+
+:root {
+  --background-color: #f8f8f8;
+  --nav-link-color: #707070;
+  --subtitle-color: #1792d2;
+  --title-color: #143774;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  border: 1px solid magenta;
+  margin: 0 auto;
+}
+
+.container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  /* text-align: center; */
+  background-color: var(--background-color);
+  padding: 2em;
+}
+
+@media (max-width: 675px) {
+  .container-nav {
+    flex-direction: column;
+  }
+}
+/* ====================
+TYPOGRAPHY
+=======================
+*/
+.title {
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  color: var(--title-color);
+  margin: 0px;
+  /* border: 2px dashed #1792d2; */
+}
+
+.subtitle {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: var(--subtitle-color);
+  /* border: 2px dashed #1792d2; */
+  margin: 0px;
+}
+
+@media (max-width: 675px) {
+  .site-title {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .title {
+    font-size: 1.85rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}
+/* ====================
+NAVIGATION
+=======================
+*/
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+nav li {
+  margin-left: 2em;
+}
+nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  transition: 80ms;
+  padding: 0.25em 0;
+}
+nav a:hover,
+/* focus stands for what page we are on */
+nav a:focus {
+  color: var(--subtitle-color);
+  border-bottom: 2px solid var(--subtitle-color);
+}
+
+@media (max-width: 675px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25em;
+  }
+
+  nav li {
+    margin: 0;
+  }
+}
+
+.current-page {
+  border-bottom: 2px solid var(--nav-link-color);
+}
+
+.current-page:hover {
+  color: var(--nav-link-color);
+}
