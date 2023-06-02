@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap");
+
+:root {
+  --darker-color: #312614;
+  --gold-color: #b7832f;
+  --main-text-color: #707070;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  background-color: #fff;
+  color: var(--main-text-color);
+}
+
+.container {
+  width: 95%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+/* TYPOGRAPHY */
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h1 span {
+  color: var(--gold-color);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* LAYOUT */
+
+img {
+  max-width: 100%;
+}
+
+.columns {
+  display: flex;
+  margin: 1em 0;
+  justify-content: space-between;
+}
+
+.col-1 {
+  width: 23%;
+}
+.col-2 {
+  width: 45%;
+}
+.col-3 {
+  width: 70%;
+}
+
+.dark {
+  color: #fff;
+  background-color: #312614;
+  padding: 1em;
+}
+
+@media (max-width: 650px) {
+  .columns {
+    flex-direction: column;
+    /* this will fix the padding and center all the p tags and such so that's centered in the column */
+    align-items: center;
+  }
+
+  .col-1,
+  .col-2,
+  .col-3 {
+    width: 100%;
+  }
+}
