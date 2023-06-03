@@ -37,7 +37,7 @@ main {
 header {
   /* text-align: center; */
   background-color: var(--background-color);
-  padding: 2em;
+  padding: 5em;
 }
 
 @media (max-width: 675px) {
@@ -61,6 +61,16 @@ header {
 .col-3 {
   width: 75%;
   /* border: 2px dashed plum; */
+}
+@media (max-width: 650px) {
+  .columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .col-1,
+  .col-3 {
+    width: 100%;
+  }
 }
 /* ====================
 TYPOGRAPHY
@@ -139,18 +149,6 @@ nav a:focus {
   border-bottom: 2px solid var(--subtitle-color);
 }
 
-@media (max-width: 675px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25em;
-  }
-
-  nav li {
-    margin: 0;
-  }
-}
-
 .current-page {
   border-bottom: 2px solid var(--nav-link-color);
 }
@@ -166,7 +164,7 @@ img {
 }
 
 .post-cover {
-  aspect-ratio: 16/9;
+  aspect-ratio: 18/9;
 }
 
 .post-thumbnail {
@@ -174,6 +172,10 @@ img {
   aspect-ratio: 3/5;
 }
 
+.content-subtitle {
+  color: var(--subtitle-color);
+  font-family: "Lora", serif;
+}
 /* CARD */
 .card {
   border: 20px solid #ebebeb;
@@ -209,4 +211,43 @@ img {
 .post-date-comments {
   font-size: 0.65em;
   color: var(--nav-link-color);
+}
+
+p {
+  color: var(--nav-link-color);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: var(--title-color);
+  padding: 3em;
+}
+
+footer p {
+  color: var(--background-color);
+  opacity: 50%;
+  margin: 0.25em;
+  font-size: 0.8rem;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25em;
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  /* post col change */
+  .post {
+    flex-direction: column;
+  }
+  .post-thumbnail {
+    aspect-ratio: 16/9;
+  }
 }
