@@ -44,6 +44,9 @@ header {
   .container-nav {
     flex-direction: column;
   }
+  header {
+    padding: 2em;
+  }
 }
 
 .columns {
@@ -121,6 +124,10 @@ TYPOGRAPHY
 h5 {
   color: var(--subtitle-color);
 }
+
+hr {
+  margin-bottom: 1.5em;
+}
 /* ====================
 NAVIGATION
 =======================
@@ -196,6 +203,7 @@ img {
 }
 
 /* POST */
+
 .post {
   /* border: 2px dashed green; */
   display: flex;
@@ -248,6 +256,10 @@ footer p {
 }
 
 @media (max-width: 650px) {
+  footer {
+    padding: 2em;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -268,5 +280,12 @@ footer p {
 
   .card img {
     aspect-ratio: 25/6;
+  }
+  .post-header {
+    order: 1;
+  }
+
+  .post-content {
+    order: 2;
   }
 }
