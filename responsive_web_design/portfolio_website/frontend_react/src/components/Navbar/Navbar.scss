@@ -1,0 +1,79 @@
+.app__navbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  //   we can see a blur background through this property
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+  //   border: 2px solid teal;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  // nesting objects withing scss tags
+  img {
+    width: 10rem;
+    // height: 20px;
+
+    @media screen and (min-width: 2000px) {
+      width: 20rem;
+      //   height: 40px;
+    }
+  }
+}
+
+.app__navbar-links {
+  //   border: 2px dashed royalblue;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+
+  list-style: none;
+  li {
+    // border: 2px dashed green;
+    margin: 0 1rem;
+    padding: 0;
+    cursor: pointer;
+
+    flex-direction: column;
+
+    div {
+      width: 5x;
+      height: 5px;
+      background: transparent;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: var(--gray-color);
+      text-decoration: none;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    &:hover {
+      div {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+}
