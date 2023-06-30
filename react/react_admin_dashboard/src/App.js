@@ -7,7 +7,7 @@ import "./App.css";
 
 const App = () => {
   // here, we are setting the activeMenu to True
-  const activeMenu = true;
+  const activeMenu = false;
 
   return (
     <div>
@@ -17,29 +17,61 @@ const App = () => {
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
-                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{ background: "blue", borderRadius: "50%" }}
+                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
                 <FiSettings />
               </button>
             </TooltipComponent>
           </div>
-          {/* this checks whether the menu is active or not */}
           {activeMenu ? (
-            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
               Sidebar
             </div>
           ) : (
-            <div className="w-0 dark:secondary-dark-bg">Sidebar w-0</div>
+            <div className="w-0 dark:bg-secondary-dark-bg">Sidebar</div>
           )}
-          {/* here we are writing DRY code and first declaring what properties will be shared when activeMenu is true and false, then add the 1 diff property for each within the "${}" */}
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
-              activeMenu ? "md:ml-72" : "flex-2"
-            }`}
+            className={
+              activeMenu
+                ? "dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full  "
+                : "bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 "
+            }
           >
-            {/* here are all our nav links */}
-            <Routes></Routes>
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
+              Navbar
+            </div>
+            {/* footer */}
+          </div>
+          <div>
+            <Routes>
+              {/* note: for each element and route link, the element text value appears at the top right corner */}
+
+              {/* dashboard  */}
+              <Route path="/" element="Ecommerce" />
+              <Route path="/ecommerce" element="Ecommerce" />
+
+              {/* Pages */}
+              <Route path="/orders" element="Orders" />
+              <Route path="/employees" element="Employees" />
+              <Route path="/customers" element="Customers" />
+
+              {/* Apps */}
+              <Route path="/kanban" element="Kanban" />
+              <Route path="/editor" element="Editor" />
+              <Route path="/calendar" element="Calendar" />
+              <Route path="/color-picker" element="ColorPicker" />
+
+              {/* Charts */}
+              <Route path="/line" element="Line" />
+              <Route path="/area" element="Area" />
+              <Route path="/bar" element="Bar" />
+              <Route path="/pie" element="Pie" />
+              <Route path="/financial" element="financial" />
+              <Route path="/color-mapping" element="ColorMapping" />
+              <Route path="/pyramid" element="Pyramid" />
+              <Route path="/stacked" element="Stacked" />
+            </Routes>
           </div>
         </div>
       </BrowserRouter>
