@@ -22,11 +22,13 @@ import {
   ColorMapping,
   Editor,
 } from "./pages";
+
+import { useState, useStateContext } from "./contexts/ContextProvider";
+
 import "./App.css";
 
 const App = () => {
-  // here, we are setting the activeMenu to True
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
