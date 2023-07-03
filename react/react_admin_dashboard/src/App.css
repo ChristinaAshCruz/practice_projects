@@ -53,7 +53,3 @@
 .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left) {
   border: none;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

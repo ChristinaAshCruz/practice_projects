@@ -23,10 +23,9 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
     >
       <span
         style={{ background: dotColor }}
-        className="absolute inline-flex rouded-full h-2 w-2 right-2 top-2"
-      >
-        {icon}
-      </span>
+        className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
+      />
+      {icon}
     </button>
   </TooltipComponent>
 );
