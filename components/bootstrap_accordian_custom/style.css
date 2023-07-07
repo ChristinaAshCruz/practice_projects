@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --color-00: #348ac7;
+  --color-01: #d74a18;
+  --color-02: #ede6db;
+  --color-03: #110902;
+  --color-04: #e79d2c;
+
+  --primary-color: #cddafd;
+  --secondary-color: #465b95;
+  --lighter-navy-blue: #6379b5;
+  --darkest-color: #0c1a3d;
+  --lightest-color: #f6f7f0;
+
+  --border-settings: 3px solid var(--darkest-color) !important;
+  --border-radius-settings: 0.375rem;
+}
+
+body {
+  font-family: "Space Mono", monospace !important;
+  background: var(--primary-color) !important;
+}
+
+.accordion {
+  background: transparent !important;
+}
+
+.accordion-header {
+  background: transparent !important;
+  border: none !important;
+  color: var(--darkest-color) !important;
+  font-size: larger !important;
+}
+
+.accordion-item {
+  border: none !important;
+  background: transparent !important;
+}
+
+.accordion-button {
+  border: none !important;
+  border-bottom: 3px solid var(--lighter-navy-blue) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0% !important;
+  font-weight: 600 !important;
+  font-size: larger !important;
+  color: var(--lighter-navy-blue) !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-bottom: 3px solid var(--darkest-color) !important;
+  color: var(--darkest-color) !important;
+}
+
+.accordion-button::after {
+  background-image: none !important;
+  content: "\f0d8" !important;
+  font-family: fontawesome !important;
+  width: auto !important;
+  height: auto !important;
+}
