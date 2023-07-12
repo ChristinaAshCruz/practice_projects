@@ -1,0 +1,43 @@
+body {
+  background: #6379b5 !important;
+}
+
+.profile {
+  border: 3px solid #0c1a3d !important;
+}
+
+a {
+  color: #f6f7f0 !important;
+}
+
+a:hover {
+  text-decoration: line-through;
+}
+
+.image {
+  top: 0;
+  left: 0;
+  z-index: 9;
+  transition: 3000ms ease-in-out;
+}
+
+.icons {
+  display: none;
+}
+
+.sparkle-icon-1 {
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  z-index: 10;
+}
+.sparkle-icon-2 {
+  position: absolute;
+  bottom: -1rem;
+  right: 32rem;
+  z-index: 10;
+}
+
+.image:hover + .icons {
+  display: block;
+}
