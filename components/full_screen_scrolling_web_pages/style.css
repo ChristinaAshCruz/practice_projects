@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.slides {
+  color: #fff;
+  background: linear-gradient(90deg, #2a397b 1%, #d3e3de 100%);
+  & img {
+    width: 350px !important;
+  }
+  & h2 {
+    font-size: 70px !important;
+    font-weight: 600 !important;
+    max-width: 650px !important;
+  }
+}

@@ -18,7 +18,7 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 9;
-  transition: 3000ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .icons {
@@ -40,4 +40,24 @@ a:hover {
 
 .image:hover + .icons {
   display: block;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
 }

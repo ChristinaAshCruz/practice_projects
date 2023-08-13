@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  /* CSS HEX */
+  --marian-blue: #33479e;
+  --periwinkle: #c5bff7ff;
+  --periwinkle-2: #d2cdfaff;
+  --periwinkle-2: rgb(230, 227, 251);
+  --vista-blue: #9ea4e8ff;
+
+  /* CSS HSL */
+  --marian-blue: hsla(229, 50%, 41%, 1);
+  --periwinkle: hsla(246, 78%, 86%, 1);
+  --periwinkle-2: hsla(247, 82%, 89%, 1);
+  --vista-blue: hsla(235, 62%, 76%, 1);
+
+  /* old colors */
+  --primary-color: #dae0f2;
+  --secondary-color: #b3b3eb;
+  --lighter-navy-blue: #6379b5;
+  --darkest-color: #33479e;
+  --more-dark: #182c7c;
+  --lightest-color: #f6f7f0;
+
+  /* border settings */
+  --border-settings: 3px solid var(--darkest-color) !important;
+  --border-radius-settings: 0.375rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  /* color: var(--darkest-color); */
+}
+
+.panel-default > .panel-heading {
+  border: var(--border-settings);
+}
+
+body {
+  background-color: var(--primary-color) !important;
+  min-height: 100vh;
+  color: var(--darkest-color) !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  box-shadow: 0 0 0 100vmax var(--secondary-color);
+  clip-path: inset(0 -100vmax);
+  background-color: var(--secondary-color);
+  /* border-bottom: var(--border-settings); */
+  display: flex;
+  overflow: initial;
+  & a {
+    color: var(--darkest-color) !important;
+    transition: 80ms;
+  }
+  & .nav-links:hover {
+    border-bottom: 2px solid var(--lightest-color);
+    color: var(--lightest-color) !important;
+  }
+  & li {
+    > img {
+      height: 32px;
+      width: auto;
+    }
+    & .flower-icon {
+      max-height: 2rem;
+      width: auto;
+      transition-duration: 2s;
+      transition-property: transform;
+    }
+    & .flower-icon:hover {
+      transform: rotate(360deg);
+    }
+  }
+  & h1 {
+    font-family: "Climate Crisis", cursive;
+    text-transform: uppercase;
+    color: var(--darkest-color);
+  }
+}
+
+.about {
+  background: linear-gradient(
+    151deg,
+    rgb(218, 224, 242) 0%,
+    rgb(197, 191, 247) 95%,
+    rgb(188, 191, 237) 100%
+  ) !important;
+  border: var(--border-settings);
+  border-radius: 15px;
+  color: var(--darkest-color) !important;
+  .typewrite {
+    color: var(--darkest-color);
+  }
+  .profile {
+    border: 3px solid var(--darkest-color);
+  }
+}
+
+#projects {
+  & .project-icon {
+    height: 2.5rem;
+    width: auto;
+  }
+  & .project-demo {
+    border: var(--border-settings);
+    border-radius: var(--border-radius-settings);
+  }
+  & .project-content-body {
+    color: var(--more-dark) !important;
+  }
+}
+
+.accordion {
+  background: transparent !important;
+
+  & .accordion-item {
+    border: none !important;
+    background: transparent !important;
+    & .accordion-header {
+      background: transparent !important;
+      border: none !important;
+      color: var(--darkest-color) !important;
+      font-size: larger !important;
+
+      & .accordion-button {
+        border: none !important;
+        border-bottom: 3px solid var(--lighter-navy-blue) !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0% !important;
+        font-weight: 600 !important;
+        font-size: larger !important;
+        color: var(--lighter-navy-blue) !important;
+      }
+
+      & .accordion-button:focus {
+        box-shadow: none !important;
+        border-bottom: 3px solid var(--darkest-color) !important;
+        color: var(--darkest-color) !important;
+      }
+
+      & .accordion-button::after {
+        background-image: none !important;
+        content: "\f0d7" !important;
+        font-family: fontawesome !important;
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+  }
+}
+
+/* MEDIA QUERY: accordian section */
+@media only screen and (max-width: 576px) {
+  .accordion {
+    & .project-content-body {
+      & h4 {
+        font-size: 15pt;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project-title,
+  .project-icon-list {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .project-icon {
+    height: 1.75rem !important;
+  }
+}
+
+footer {
+  box-shadow: 0 0 0 100vmax var(--lighter-navy-blue);
+  clip-path: inset(0 -100vmax);
+  background: var(--secondary-color);
+  /* color: var(--lightest-color); */
+  > .container {
+    & a {
+      font-style: italic;
+      color: var(--darkest-color);
+      text-decoration: none;
+      transition: 80ms;
+    }
+    & a:hover {
+      text-decoration: underline;
+      color: var(--lightest-color);
+    }
+    & .icon-links {
+      & i:hover {
+        color: var(--lightest-color);
+      }
+    }
+  }
+}
+
+/* components */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+.project-feature {
+  padding-top: 2rem !important;
+}
+
+#education {
+  & .education-cards {
+    & h4 {
+      color: var(--darkest-color) !important;
+    }
+    & p {
+      color: var(--darkest-color) !important;
+    }
+    & .card {
+      border: 3px solid var(--darkest-color) !important;
+      background: var(--lightest-color) !important;
+      & hr {
+        border: none;
+        background-color: var(--marian-blue) !important;
+        height: 3px !important;
+      }
+    }
+  }
+}
+
+.btn {
+  /* background-color: var(--secondary-color) !important; */
+  background: var(--primary-color) !important;
+  padding: 1rem !important;
+  border-radius: 15px !important;
+  text-decoration: none !important;
+  color: var(--more-dark) !important;
+  border: 3px solid var(--more-dark) !important;
+  transition: 0.2s !important;
+}
+
+.btn:hover {
+  background-color: #596cbf !important;
+  color: #f6f7f0 !important;
+  border: 3px solid var(--more-dark) !important;
+  transform: translate(0.25rem, -0.25rem) !important;
+  box-shadow: -0.25rem 0.25rem var(--more-dark) !important;
+}
+@media only screen and (min-width: 1350px) {
+  /* ruleset for >= 320px */
+}
