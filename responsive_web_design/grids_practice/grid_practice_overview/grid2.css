@@ -1,0 +1,59 @@
+@import url("https://fonts.cdnfonts.com/css/samsung-sharp-sans");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Samsung Sharp Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  /* we set the height since we want all our grid children to take up the entire view screen */
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas: 
+  /* this is a TEXT REPRESENTATION of the layout we want */
+    "header header header"
+    "nav content sidebar"
+    "nav footer footer";
+
+  /* layout for our columns - how it looks horizontally */
+  grid-template-columns: 1fr 4fr 1fr;
+
+  /* layout for our rows - how it looks along vertically */
+  grid-template-rows: 1fr 10fr 1fr;
+}
+
+header,
+footer,
+main,
+aside,
+nav {
+  background-color: lightsteelblue;
+  color: azure;
+  padding: 20px;
+  border: royalblue 1px solid;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}
