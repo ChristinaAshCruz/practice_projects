@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css"
+    />
+    <title>My Contacts</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="center-align">My Contacts</h1>
+      <input type="text" id="filterInput" placeholder="Search names..." onke />
+      <ul class="collection with-header" id="names">
+        <li class="collection-header">
+          <!-- putting letters here -->
+          <h5>A</h5>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Abe
+          </a>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Adam
+          </a>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Alan
+          </a>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Anna
+          </a>
+        </li>
+        <!-- B Names -->
+        <li class="collection-header">
+          <!-- putting letters here -->
+          <h5>B</h5>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Bill
+          </a>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Bob
+          </a>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Brad
+          </a>
+        </li>
+        <!-- C Names -->
+        <li class="collection-header">
+          <!-- putting letters here -->
+          <h5>C</h5>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Carrie
+          </a>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Cathy
+          </a>
+        </li>
+        <li class="collection-item">
+          <a href="#">
+            <!-- names here -->
+            Courtney
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      // js goes here
+
+      // create a variable to grab filterInput
+
+      let filterInput = document.getElementById("filterInput");
+      // add event listener
+      filterInput.addEventListener("keyup", filterNames);
+
+      // function thats run during event
+      function filterNames() {
+        // get value of input
+        let filterValue = filterInput.value.toUpperCase();
+        console.log(filterValue);
+
+        // get names in our <ul>
+        let ul = document.getElementById("names");
+        // get collection items in our <li>
+        // our querySelectorAll will select by classes
+        // placing items into an array
+        let li = ul.querySelectorAll("li.collection-item");
+
+        // loop through our new array
+        for (let i = 0; i < li.length; i++) {
+          // get names from each <a> inside each <li>
+          // 0 is used since we only want the current link of each <li>
+          let a = li[i].getElementsByTagName("a")[0];
+
+          // test whether the a's innerHTML matches input value
+
+          // if any of the letters of the current a's inner html (converted to uppercase) match to any of the letters in our filter value....
+          if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+            // if matches... we want the name to disappear
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

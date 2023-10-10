@@ -1,4 +1,5 @@
-// Book Class: represents a book
+// book class: represents a book
+
 class Book {
   constructor(title, author, isbn) {
     this.title = title;
@@ -7,94 +8,80 @@ class Book {
   }
 }
 
-// UI Class: handle UI tasks
-class UI {
-  // no need to instantiate class
-  // will just hold static methods
+// UI class: handles UI tasks
 
+class UI {
   static displayBooks() {
     const books = Store.getBooks();
 
-    // loop through all books in array
-    // call method -> addBookToList()
     books.forEach((book) => UI.addBookToList(book));
   }
 
   static addBookToList(book) {
-    // grab onto book list id in DOM
     const list = document.querySelector("#book-list");
 
-    // will be creating a table element with data
     const row = document.createElement("tr");
 
-    // inserting data into our 'row'
     row.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.isbn}</td>
-    <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td>${book.isbn}</td>
+      <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
     `;
 
-    // append row to our list
     list.appendChild(row);
   }
 
-  static deleteBook(element) {
-    // making sure whatever our user clicks has the book data we need to remove it
-    // if our targeted element has a 'delete' class
-    if (element.classList.contains("delete")) {
-      // using parentElement twice would be targeting the whole row
-      element.parentElement.parentElement.remove();
+  static deleteBook(el) {
+    if (el.classList.contains("delete")) {
+      el.parentElement.parentElement.remove();
     }
   }
 
+  // NOT VALIDATED alert
   static showAlert(message, className) {
-    // creating a HTML element to be inserted
     const div = document.createElement("div");
-    // passing in our alert styling with its class
     div.className = `alert alert-${className}`;
-    // append our message to our div element
     div.appendChild(document.createTextNode(message));
-
     const container = document.querySelector(".container");
-    const form = document.querySelector("#book-form");
-    container.insertBefore(div, form);
-
-    // set a timeout for alert to disappear
-    // needs 2 values = targeted element, time limit in ms
-    setTimeout(() => document.querySelector(".alert").remove(), 3000);
+    const table = document.querySelector(".table");
+    container.insertBefore(div, table);
+    // remove alert after 5 seconds
+    setTimeout(() => document.querySelector(".alert").remove(), 5000);
   }
 
   static clearFields() {
-    // select each input element and set the value to an empty value
     document.querySelector("#title").value = "";
     document.querySelector("#author").value = "";
     document.querySelector("#isbn").value = "";
   }
 }
 
-// Store class: handles storage
+// Store class: handles (local) storage - within the browser
+
 class Store {
-  // since you can't store objects in storage, we'll be storing strings
   static getBooks() {
     let books;
-    // if there is no item called books
     if (localStorage.getItem("books") === null) {
       books = [];
     } else {
       books = JSON.parse(localStorage.getItem("books"));
     }
+
     return books;
   }
 
   static addBook(book) {
     const books = Store.getBooks();
+
     books.push(book);
+
     localStorage.setItem("books", JSON.stringify(books));
   }
 
   static removeBook(isbn) {
     const books = Store.getBooks();
+
     books.forEach((book, index) => {
       if (book.isbn === isbn) {
         books.splice(index, 1);
@@ -105,51 +92,55 @@ class Store {
   }
 }
 
-// Event: Display Books
-// when our DOM content is loaded, it will run the displayBooks() method in our UI class
+// event: display books
+
 document.addEventListener("DOMContentLoaded", UI.displayBooks);
 
-// Event: Add a book
-// grabbing onto our form id
-document.querySelector("#book-form").addEventListener("submit", (element) => {
-  // prevent actual submit
-  element.preventDefault();
+// event: add a book
 
-  // get form value
+document.querySelector("#book-form").addEventListener("submit", (e) => {
+  // prevent actual submit
+  e.preventDefault();
+
+  // get form values
   const title = document.querySelector("#title").value;
   const author = document.querySelector("#author").value;
   const isbn = document.querySelector("#isbn").value;
 
-  // validate
-  //   if title, author, or isbn is empty, show alert
+  // validation
   if (title === "" || author === "" || isbn === "") {
-    // alert("Please fill in all fields");
-    UI.showAlert("Please fill in all fields", "danger");
-
-    // if all inputs are filled, follow through with add Book methods
+    // show NOT VALIDATED alert
+    UI.showAlert(
+      "***Please complete all fields in order to add your book***",
+      "danger"
+    );
   } else {
-    //instantiate book
+    // instantiate book
     const book = new Book(title, author, isbn);
 
-    // add book to our UI
+    // add book to UI
     UI.addBookToList(book);
 
     // add book to Store
     Store.addBook(book);
 
-    // show success message
-    UI.showAlert("Success! Your book is added.", "success");
+    // show VALIDATED alert
+    UI.showAlert("Book successfully added!", "success");
 
-    // clear input fields when submitted
+    //clear fields
     UI.clearFields();
   }
 });
 
-// Event: Remove a book
-document.querySelector("#book-list").addEventListener("click", (element) => {
-  //   console.log(e.target);
-  UI.deleteBook(element.target);
-  // show alert after removing book
-  // show success message
-  UI.showAlert("Book removed.", "danger");
+// event: remove a book
+
+document.querySelector("#book-list").addEventListener("click", (e) => {
+  //remove book from UI
+  UI.deleteBook(e.target);
+
+  // remove book from Store
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+
+  // show BOOK REMOVED SUCCESS alert
+  UI.showAlert("Book successfully removed!", "warning");
 });
