@@ -2,12 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/sushi-9.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/script.js" defer></script>
+    <title>Sushiman</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <!-- header section -->
+    <header>
+      <nav class="header__nav">
+        <div class="header__logo">
+          <h4>Sushiman</h4>
+          <div class="header__logo-overlay"></div>
+        </div>
+
+        <ul class="header__menu">
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+          <li>
+            <a href="#food">Food</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#about-us">About Us</a>
+          </li>
+          <li>
+            <img src="assets/search.svg" alt="search" />
+          </li>
+        </ul>
+
+        <ul class="header__menu-mobile">
+          <li>
+            <img src="assets/menu.svg" alt="menu" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-image">
+        <!-- <img src="/assets/sushi-1.png" alt="sushi" /> -->
+        <h2>
+          日 <br />
+          本 <br />
+          食
+        </h2>
+        <div class="hero-image__overlay"></div>
+      </div>
+    </section>
   </body>
 </html>
