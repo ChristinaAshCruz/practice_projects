@@ -22,7 +22,8 @@
 .header__logo h4 {
   text-transform: uppercase;
   padding-left: 30px;
-  color: white;
+  color: var(--color-creamson);
+  font-family: var(--playfair-display);
 }
 .header__menu,
 .header__menu-mobile {
