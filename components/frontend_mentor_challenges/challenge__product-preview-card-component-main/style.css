@@ -13,6 +13,12 @@ body {
   background-color: #f4eae3;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 15px;
 }
 
 .gray {
@@ -31,14 +37,19 @@ body {
   padding: 13px;
 }
 
+.btn__cart:hover {
+  background: #1a4031;
+  color: var(--white);
+}
+
 .card-title {
   font-family: var(--fraunces-font);
 }
 
 .card__category {
   letter-spacing: 0.3rem;
-  line-height: ;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
