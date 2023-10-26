@@ -14,6 +14,13 @@
   --green-teal: hsl(166, 100%, 37%);
   --cobalt-blue: hsl(234, 85%, 45%);
 
+  /* summary transparent colors */
+  --dark-gray-blue-transparent: hsla(224, 30%, 27%, 0.4);
+  --light-red-transparent: hsla(0, 100%, 67%, 0.06);
+  --orangey-yellow-transparent: hsl(39, 100%, 56%, 0.06);
+  --green-teal-transparent: hsl(166, 100%, 37%, 0.06);
+  --cobalt-blue-transparent: hsl(234, 85%, 45%, 0.06);
+
   /* gradients */
   --background-gradient: linear-gradient(
     to bottom,
@@ -40,6 +47,11 @@ main {
 
 h1 {
   font-weight: 500;
+}
+
+.btn {
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
 }
 
 .rounded-circle {
@@ -79,6 +91,31 @@ h1 {
 
 .result-card p {
   font-weight: 300;
+}
+
+.summary-row__result-grade {
+  color: var(--dark-gray-blue-transparent);
+}
+
+.summary-row__result {
+  color: var(--dark-gray-blue);
+}
+
+.summary-row__reaction {
+  background: var(--light-red-transparent);
+  color: var(--light-red);
+}
+.summary-row__memory {
+  background: var(--orangey-yellow-transparent);
+  color: var(--orangey-yellow);
+}
+.summary-row__verbal {
+  background: var(--green-teal-transparent);
+  color: var(--green-teal);
+}
+.summary-row__visual {
+  background: var(--cobalt-blue-transparent);
+  color: var(--cobalt-blue);
 }
 
 .attribution {

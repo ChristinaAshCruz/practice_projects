@@ -22,9 +22,10 @@
     <title>Frontend Mentor | Results summary component</title>
   </head>
   <body>
-    <div class="pt-lg-4 p-sm-0">
+    <div class="pt-lg-5 p-sm-0">
       <!-- main column -->
       <main class="d-flex flex-column flex-lg-row shadow">
+        <!-- DIV: result -->
         <div
           class="result-card col-lg-6 d-flex flex-column align-items-center text-center gap-3"
         >
@@ -40,7 +41,82 @@
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
-        <div class="col-lg-6 p-5 rounded-4"></div>
+        <!-- DIV: summary -->
+        <div class="col-lg-6 p-5 rounded-4 d-flex flex-column gap-4">
+          <h4 class="fw-bold m-0">Summary</h4>
+          <!-- SUMMARY ROWS -->
+          <div class="d-flex flex-column gap-3">
+            <!-- Row: reaction -->
+            <div
+              class="summary-row__reaction p-3 col d-flex justify-content-between rounded-3"
+            >
+              <!-- icon + row title -->
+              <div class="d-flex gap-3">
+                <img src="assets/images/icon-reaction.svg" alt="" />
+                <p class="m-0 fw-semibold">Reaction</p>
+              </div>
+              <!-- result -->
+              <div class="d-flex">
+                <p class="m-0 summary-row__result-grade fw-bold">
+                  <span class="summary-row__result">80 </span
+                  ><span class="fw-normal"> / </span>100
+                </p>
+              </div>
+            </div>
+            <!-- Row: memory -->
+            <div
+              class="summary-row__memory p-3 col d-flex justify-content-between rounded-3"
+            >
+              <!-- icon + row title -->
+              <div class="d-flex gap-3">
+                <img src="assets/images/icon-memory.svg" alt="" />
+                <p class="m-0 fw-semibold">Memory</p>
+              </div>
+              <!-- result -->
+              <div class="d-flex">
+                <p class="m-0 summary-row__result-grade fw-bold">
+                  <span class="summary-row__result">92 </span
+                  ><span class="fw-normal"> / </span>100
+                </p>
+              </div>
+            </div>
+            <!-- Row: verbal -->
+            <div
+              class="summary-row__verbal p-3 col d-flex justify-content-between rounded-3"
+            >
+              <!-- icon + row title -->
+              <div class="d-flex gap-3">
+                <img src="assets/images/icon-verbal.svg" alt="" />
+                <p class="m-0 fw-semibold">Verbal</p>
+              </div>
+              <!-- result -->
+              <div class="d-flex">
+                <p class="m-0 summary-row__result-grade fw-bold">
+                  <span class="summary-row__result">61 </span
+                  ><span class="fw-normal"> / </span>100
+                </p>
+              </div>
+            </div>
+            <!-- Row: Visual -->
+            <div
+              class="summary-row__visual p-3 col d-flex justify-content-between rounded-3"
+            >
+              <!-- icon + row title -->
+              <div class="d-flex gap-3">
+                <img src="assets/images/icon-visual.svg" alt="" />
+                <p class="m-0 fw-semibold">Visual</p>
+              </div>
+              <!-- result -->
+              <div class="d-flex">
+                <p class="m-0 summary-row__result-grade fw-bold">
+                  <span class="summary-row__result">71 </span
+                  ><span class="fw-normal"> / </span>100
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn col rounded-pill p-3 fw-bold fs-4">Continue</a>
+        </div>
       </main>
       <!-- Your Result 76 of 100 Great You scored higher than 65% of the people who
       have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100 Verbal
