@@ -22,14 +22,25 @@
     <title>Frontend Mentor | Results summary component</title>
   </head>
   <body>
-    <div class="container pt-4">
+    <div class="pt-lg-4 p-sm-0">
       <!-- main column -->
-      <main class="d-flex flex-column flex-lg-row border border-4">
-        <div class="result-card">
-          Your Result 76 of 100 Great You scored higher than 65% of the people
-          who have taken these tests.
+      <main class="d-flex flex-column flex-lg-row shadow">
+        <div
+          class="result-card col-lg-6 d-flex flex-column align-items-center text-center gap-3"
+        >
+          <h4 class="lavender fw-semibold">Your Result</h4>
+          <div
+            class="rounded-circle d-flex flex-column align-items-center justify-content-center my-3"
+          >
+            <h1 class="fw-bold m-0 result-card__main-grade-number">76</h1>
+            <p class="lavender m-0 opacity-50">of 100</p>
+          </div>
+          <h2 class="m-0 fw-semibold">Great</h2>
+          <p class="result-card__text lavender">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
         </div>
-        <div class="border border-1 border-success"></div>
+        <div class="col-lg-6 p-5 rounded-4"></div>
       </main>
       <!-- Your Result 76 of 100 Great You scored higher than 65% of the people who
       have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100 Verbal
