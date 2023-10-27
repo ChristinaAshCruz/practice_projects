@@ -23,26 +23,28 @@
   </head>
   <body>
     <div class="pt-lg-5 p-sm-0">
-      <!-- main column -->
       <main class="d-flex flex-column flex-lg-row shadow">
         <!-- DIV: result -->
         <div
-          class="result-card col-lg-6 d-flex flex-column align-items-center text-center gap-3"
+          class="result-card col-lg-6 d-flex flex-column align-items-center justify-content-between"
         >
           <h4 class="lavender fw-semibold">Your Result</h4>
           <div
-            class="rounded-circle d-flex flex-column align-items-center justify-content-center my-3"
+            class="rounded-circle d-flex flex-column align-items-center justify-content-center"
           >
             <h1 class="fw-bold m-0 result-card__main-grade-number">76</h1>
-            <p class="lavender m-0 opacity-50">of 100</p>
+            <p class="lavender m-0 opacity-50 fs-6">of 100</p>
           </div>
-          <h2 class="m-0 fw-semibold">Great</h2>
-          <p class="result-card__text lavender">
-            You scored higher than 65% of the people who have taken these tests.
-          </p>
+          <div class="text-center">
+            <h2 class="m-0 fw-semibold mb-3">Great</h2>
+            <p class="result-card__text lavender">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
         </div>
         <!-- DIV: summary -->
-        <div class="col-lg-6 p-5 rounded-4 d-flex flex-column gap-4">
+        <div class="summary-card col-lg-6 rounded-4 d-flex flex-column">
           <h4 class="fw-bold m-0">Summary</h4>
           <!-- SUMMARY ROWS -->
           <div class="d-flex flex-column gap-3">
@@ -115,7 +117,11 @@
               </div>
             </div>
           </div>
-          <a href="#" class="btn col rounded-pill p-3 fw-bold fs-4">Continue</a>
+          <a
+            href="#"
+            class="summary-card__btn btn col rounded-pill p-3 fw-bold fs-5"
+            >Continue</a
+          >
         </div>
       </main>
       <!-- Your Result 76 of 100 Great You scored higher than 65% of the people who
@@ -123,11 +129,11 @@
       61 / 100 Visual 72 / 100 Continue -->
     </div>
 
-    <div class="attribution">
+    <div class="attribution mt-4">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Christina Cruz</a>.
     </div>
   </body>
 </html>
