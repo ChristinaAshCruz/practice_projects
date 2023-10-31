@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        font-size: 15px;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="container mx-auto mt-20 bg-very-dark-blue">
+    <!-- main rating card -->
+    <div
+      class="mx-auto mb-10 flex w-104 flex-col items-center justify-center gap-8 rounded-3xl bg-dark-blue p-9 text-center"
+    >
+      <div class="mx-auto">
+        <img src="images/illustration-thank-you.svg" alt="" />
+      </div>
+      <p class="rounded-full bg-medium-gray/20 p-1 px-5 pt-2 text-orange">
+        You selected 4 out of 5
+      </p>
+      <div class="flex flex-col gap-3">
+        <h1 class="text-2xl text-white">Thank you!</h1>
+        <p class="tracking-wide text-light-gray">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <a
+        href="index.html"
+        class="hidden rounded-full bg-orange px-5 py-3 pt-3.5 uppercase text-white"
+        >restart</a
+      >
+    </div>
+
+    <div class="attribution text-white">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Christina Cruz</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

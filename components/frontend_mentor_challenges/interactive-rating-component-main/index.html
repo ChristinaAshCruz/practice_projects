@@ -37,7 +37,8 @@
     </style>
   </head>
   <body class="container mx-auto mt-20 bg-very-dark-blue">
-    <div class="w-104 mx-auto flex flex-col gap-6 rounded-3xl bg-dark-blue p-8">
+    <!-- main rating card -->
+    <div class="mx-auto flex w-104 flex-col gap-6 rounded-3xl bg-dark-blue p-8">
       <!-- star icon -->
       <div
         class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/20"
@@ -52,37 +53,49 @@
       </p>
       <div class="flex justify-between align-middle">
         <button
+          value="1"
           class="curso flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           1
         </button>
         <button
+          value="2"
           class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           2
         </button>
         <button
+          value="3"
           class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           3
         </button>
         <button
+          value="4"
           class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           4
         </button>
         <button
+          value="5"
           class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           5
         </button>
       </div>
-      <a
+      <!-- submit button -->
+      <!-- <a
         href=""
-        class="btn columns-1 rounded-full bg-orange p-3.5 text-center font-medium uppercase text-white"
-        style="letter-spacing: 0.2em"
+        class="btn columns-1 rounded-full bg-orange p-3.5 text-center font-medium uppercase text-white hover:bg-white"
         >Submit</a
+      > -->
+      <a
+        href="thankYou.html"
+        class="pt.3.5 flex items-center justify-center rounded-full bg-medium-gray/10 bg-orange p-3 pt-3.5 uppercase text-white hover:bg-white hover:text-orange focus:bg-light-gray focus:text-white"
+        style="letter-spacing: 0.25em"
       >
+        submit
+      </a>
     </div>
 
     <!-- Rating state end -->
@@ -102,5 +115,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Christina Cruz</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
