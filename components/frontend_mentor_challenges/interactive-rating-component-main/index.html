@@ -12,10 +12,21 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Interactive rating component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      body {
+        font-size: 15px;
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -25,21 +36,53 @@
       }
     </style>
   </head>
-  <body class="bg-very-dark-blue container mx-auto mt-20">
-    <div class="bg-dark-blue mx-auto w-2/3 rounded-xl p-6">
+  <body class="container mx-auto mt-20 bg-very-dark-blue">
+    <div class="w-104 mx-auto flex flex-col gap-6 rounded-3xl bg-dark-blue p-8">
       <!-- star icon -->
       <div
-        class="bg-very-dark-blue flex h-14 w-14 items-center justify-center rounded-full"
+        class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/20"
       >
         <img src="images/icon-star.svg" alt="" />
       </div>
-      <h1 class="text-3xl font-medium text-white">How did we do?</h1>
+      <h1 class="text-2xl font-medium text-white">How did we do?</h1>
       <!-- Rating state start -->
       <p class="text-medium-gray">
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      1 2 3 4 5 Submit
+      <div class="flex justify-between align-middle">
+        <button
+          class="curso flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+        >
+          1
+        </button>
+        <button
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+        >
+          2
+        </button>
+        <button
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+        >
+          3
+        </button>
+        <button
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+        >
+          4
+        </button>
+        <button
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+        >
+          5
+        </button>
+      </div>
+      <a
+        href=""
+        class="btn columns-1 rounded-full bg-orange p-3.5 text-center font-medium uppercase text-white"
+        style="letter-spacing: 0.2em"
+        >Submit</a
+      >
     </div>
 
     <!-- Rating state end -->
@@ -53,11 +96,11 @@
 
     <!-- Thank you state end -->
 
-    <div class="attribution">
+    <div class="attribution text-white">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Christina Cruz</a>.
     </div>
   </body>
 </html>
