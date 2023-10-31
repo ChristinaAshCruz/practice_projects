@@ -13,7 +13,11 @@ module.exports = {
     fontFamily: {
       sans: ["Overpass", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      width: {
+        104: "26rem",
+      },
+    },
   },
   plugins: [],
 };
