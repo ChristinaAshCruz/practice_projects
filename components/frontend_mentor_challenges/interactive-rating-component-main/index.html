@@ -23,7 +23,7 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      body {
+      input[type="radio"]:checked + label body {
         font-size: 15px;
       }
 
@@ -38,7 +38,10 @@
   </head>
   <body class="container mx-auto mt-20 bg-very-dark-blue">
     <!-- main rating card -->
-    <div class="mx-auto flex w-104 flex-col gap-6 rounded-3xl bg-dark-blue p-8">
+    <div
+      class="mx-auto mb-10 flex w-104 flex-col gap-6 rounded-3xl bg-dark-blue p-8"
+      id="rating-card"
+    >
       <!-- star icon -->
       <div
         class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/20"
@@ -51,62 +54,158 @@
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <div class="flex justify-between align-middle">
-        <button
+      <!-- <div class="flex justify-between align-middle"> -->
+      <form action="#" id="rating-form">
+        <fieldset>
+          <div class="mb-7 flex justify-between align-middle">
+            <div>
+              <input
+                type="radio"
+                name="rating"
+                value="1"
+                id="rating1"
+                class="peer hidden"
+              />
+              <label
+                for="rating1"
+                class="rating-button flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white peer-checked:bg-light-gray peer-checked:text-white"
+                >1</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="rating"
+                value="2"
+                id="rating2"
+                class="peer hidden"
+              />
+              <label
+                for="rating2"
+                class="rating-button flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white peer-checked:bg-light-gray peer-checked:text-white"
+                >2</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="rating"
+                value="3"
+                id="rating3"
+                class="peer hidden"
+              />
+              <label
+                for="rating3"
+                class="rating-button flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white peer-checked:bg-light-gray peer-checked:text-white"
+                >3</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="rating"
+                value="4"
+                id="rating4"
+                class="peer hidden"
+              />
+              <label
+                for="rating4"
+                class="rating-button flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray checked:text-white hover:bg-orange hover:text-white peer-checked:bg-light-gray peer-checked:text-white"
+                >4</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="rating"
+                value="5"
+                id="rating5"
+                class="peer hidden"
+              />
+              <label
+                for="rating5"
+                class="rating-button flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white peer-checked:bg-light-gray peer-checked:text-white"
+                >5</label
+              >
+            </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full rounded-full bg-medium-gray/10 bg-orange p-3 pt-3.5 text-center uppercase text-white hover:bg-white hover:text-orange focus:bg-light-gray focus:text-white"
+              style="letter-spacing: 0.25em"
+              id="rating-submit"
+            >
+              submit
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <!-- <button
           value="1"
-          class="curso flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+          class="rating-button flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-center text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           1
         </button>
         <button
           value="2"
-          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+          class="rating-button flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           2
         </button>
         <button
           value="3"
-          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+          class="rating-button flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           3
         </button>
         <button
           value="4"
-          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+          class="rating-button flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           4
         </button>
         <button
           value="5"
-          class="flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
+          class="rating-button flex h-12 w-12 items-center justify-center rounded-full bg-medium-gray/10 pt-1 text-light-gray hover:bg-orange hover:text-white focus:bg-light-gray focus:text-white"
         >
           5
-        </button>
-      </div>
+        </button> -->
+      <!-- </div> -->
       <!-- submit button -->
       <!-- <a
         href=""
         class="btn columns-1 rounded-full bg-orange p-3.5 text-center font-medium uppercase text-white hover:bg-white"
         >Submit</a
       > -->
-      <a
-        href="thankYou.html"
-        class="pt.3.5 flex items-center justify-center rounded-full bg-medium-gray/10 bg-orange p-3 pt-3.5 uppercase text-white hover:bg-white hover:text-orange focus:bg-light-gray focus:text-white"
-        style="letter-spacing: 0.25em"
-      >
-        submit
-      </a>
     </div>
 
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch!
-
+    <div
+      class="mx-auto mb-10 mb-10 flex hidden w-104 flex-col items-center justify-center gap-9 rounded-3xl bg-dark-blue p-9 text-center"
+      id="thank-you-card"
+    >
+      <div class="mx-auto">
+        <img src="images/illustration-thank-you.svg" alt="" />
+      </div>
+      <p class="rounded-full bg-medium-gray/20 p-1 px-5 pt-2 text-orange">
+        You selected <span id="rating-selection"></span> out of 5
+      </p>
+      <div class="flex flex-col gap-3">
+        <h1 class="text-2xl text-white">Thank you!</h1>
+        <p class="tracking-wide text-light-gray">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <a
+        href="#"
+        class="hidden rounded-full bg-orange px-5 py-3 pt-3.5 uppercase text-white"
+        >restart</a
+      >
+    </div>
     <!-- Thank you state end -->
 
     <div class="attribution text-white">

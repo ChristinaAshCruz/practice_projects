@@ -60,7 +60,7 @@ class UI {
 // Store class: handles (local) storage - within the browser
 
 class Store {
-  static getBooks() {
+  static getBooks() {  
     let books;
     if (localStorage.getItem("books") === null) {
       books = [];
